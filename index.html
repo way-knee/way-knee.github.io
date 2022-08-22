@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 
-
 <html>
     <head>
         <title> CO2 Tableau Dashboard </title>
     </head>
-    <p>All of my data is from <a href="https://ourworldindata.org/">ourworldindata.org.</a></p>
+    <p>All of my data is from <a href="">ourworldindata.org.</a></p>
+    <p>I used three data sets:</p>
+    <ol>
+        <li>a carbon emission data set that contains country, year, and CO2 emission information;</li>
+        <li>a continent data set that maps each country to its continent;</li>
+        <li>a population data set that contains country, year, and population information.</li>
+    </ol>
     <p>This report consists of three tabs:</p>
     <ol>
         <li>Annual CO2 Emissions by Country: a line chart with years on the horizontal axis and CO2 emissions on the vertical axis.</li>
@@ -13,7 +18,7 @@
         <li>Annual CO2 Emissions per Capita by Country: a line chart with years on the horizontal axis and per capita CO2 emissions on the vertical axis. My Python code for data cleaning and wrangling can be found in Appendix 2.</li>
     </ol>
     <body>
-        <div class='tableauPlaceholder' id='viz1661132012445' style='position: relative'>
+        <div style = "margin: auto;" class='tableauPlaceholder' id='viz1661198570525' style='position: relative'>
             <noscript>
                 <a href='#'>
                     <img alt='Global Carbon Emission Data ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;CO2_emission_16611157008190&#47;CO2EmissionSummary&#47;1_rss.png' style='border: none' />
@@ -36,14 +41,16 @@
             </object>
         </div>                
         <script type='text/javascript'>                    
-            var divElement = document.getElementById('viz1661132012445');                    
+            var divElement = document.getElementById('viz1661198570525');                    
             var vizElement = divElement.getElementsByTagName('object')[0];                    
             vizElement.style.width='1016px';vizElement.style.height='691px';                    
             var scriptElement = document.createElement('script');                    
             scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
             vizElement.parentNode.insertBefore(scriptElement, vizElement);                
         </script>
-
+        
+        <br></br>
+        <br></br>
         <h3>Appendix 1</h3>
         <pre>
 import csv
@@ -80,6 +87,8 @@ with open("co2-continents.csv", "w") as f:
     write.writerow(header)
     write.writerows(co2_list)
         </pre>
+        
+        <br></br>
         <h3>Appendix 2</h3>
         <pre>
 import csv
